@@ -1,7 +1,18 @@
-<div class="container">
+<div class="container" style="margin-top: 20px;">
   <div class="row">
     <div class="col" *ngFor="let char of characters">
-      <p>{{char.name}}</p>
+      <div class="card">
+        <img src="{{char.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5>{{characters.name}}</h5>
+          <p class="card-text">
+            Status: {{char.status}}<br>
+            Species: {{char.species}}<br>
+            Id: {{char.id}}<br>
+          </p>
+        </div>
+        <a [routerLink]="['/characters', char.id]" class="btn btn-danger ver-mas">Ver más</a>
+      </div>
     </div>
   </div>
 </div>

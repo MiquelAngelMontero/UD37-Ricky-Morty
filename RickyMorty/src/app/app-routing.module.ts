@@ -14,7 +14,7 @@ const routes: Routes = [
     component:CharactersComponent
   },
   {
-    path:'home',
+    path:'',
     component:HomeComponent
   }
 ];
